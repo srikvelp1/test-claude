@@ -18,7 +18,7 @@
                 <div class="dropdown">
                     <button class="profile-button">My Account ▼</button>
                     <div class="dropdown-content">
-                        <a href="#">Profile</a>
+                        <a href="profile.html">Profile</a>
                         <a href="#">Orders</a>
                         <a href="#">Settings</a>
                         <a href="#">Logout</a>
@@ -31,21 +31,24 @@
             <ul>
                 <li><a href="index.html">Home</a></li>
                 <li><a href="shop.html">Shop</a></li>
-                <li><a href="#">Cart (0)</a></li>
+                <li><a href="cart.html">Cart (<span class="cart-count">0</span>)</a></li>
             </ul>
         </nav>
     </header>
 
     <main class="container">
         <div class="filters">
-            <button class="filter-button">All Products</button>
-            <button class="filter-button">Electronics</button>
-            <button class="filter-button">Clothing</button>
-            <button class="filter-button">Home & Garden</button>
+            <button class="filter-button" data-category="all">All Products</button>
+            <button class="filter-button" data-category="electronics">Electronics</button>
+            <button class="filter-button" data-category="clothing">Clothing</button>
+            <button class="filter-button" data-category="home">Home & Garden</button>
+            <button class="filter-button" data-category="books">Books</button>
+            <button class="filter-button" data-category="sports">Sports</button>
         </div>
 
         <div class="products">
-            <div class="product-card">
+            <!-- Electronics -->
+            <div class="product-card" data-category="electronics">
                 <div class="product-image">Product Image 1</div>
                 <div class="product-info">
                     <h3 class="product-title">Wireless Headphones</h3>
@@ -55,7 +58,7 @@
                 </div>
             </div>
 
-            <div class="product-card">
+            <div class="product-card" data-category="electronics">
                 <div class="product-image">Product Image 2</div>
                 <div class="product-info">
                     <h3 class="product-title">Smart Watch</h3>
@@ -65,7 +68,8 @@
                 </div>
             </div>
 
-            <div class="product-card">
+            <!-- Clothing -->
+            <div class="product-card" data-category="clothing">
                 <div class="product-image">Product Image 3</div>
                 <div class="product-info">
                     <h3 class="product-title">Casual T-Shirt</h3>
@@ -75,12 +79,57 @@
                 </div>
             </div>
 
-            <div class="product-card">
+            <!-- Home & Garden -->
+            <div class="product-card" data-category="home">
                 <div class="product-image">Product Image 4</div>
                 <div class="product-info">
                     <h3 class="product-title">Plant Pot Set</h3>
                     <p class="product-price">$34.99</p>
                     <p class="product-description">Set of 3 decorative ceramic plant pots.</p>
+                    <button class="buy-button">Add to Cart</button>
+                </div>
+            </div>
+
+            <!-- Books -->
+            <div class="product-card" data-category="books">
+                <div class="product-image">Product Image 5</div>
+                <div class="product-info">
+                    <h3 class="product-title">Best Seller Novel</h3>
+                    <p class="product-price">$19.99</p>
+                    <p class="product-description">Award-winning fiction novel, hardcover edition.</p>
+                    <button class="buy-button">Add to Cart</button>
+                </div>
+            </div>
+
+            <!-- Sports -->
+            <div class="product-card" data-category="sports">
+                <div class="product-image">Product Image 6</div>
+                <div class="product-info">
+                    <h3 class="product-title">Yoga Mat</h3>
+                    <p class="product-price">$29.99</p>
+                    <p class="product-description">Premium non-slip yoga mat with carrying strap.</p>
+                    <button class="buy-button">Add to Cart</button>
+                </div>
+            </div>
+
+            <!-- More Electronics -->
+            <div class="product-card" data-category="electronics">
+                <div class="product-image">Product Image 7</div>
+                <div class="product-info">
+                    <h3 class="product-title">Bluetooth Speaker</h3>
+                    <p class="product-price">$79.99</p>
+                    <p class="product-description">Portable wireless speaker with rich sound.</p>
+                    <button class="buy-button">Add to Cart</button>
+                </div>
+            </div>
+
+            <!-- More Clothing -->
+            <div class="product-card" data-category="clothing">
+                <div class="product-image">Product Image 8</div>
+                <div class="product-info">
+                    <h3 class="product-title">Denim Jacket</h3>
+                    <p class="product-price">$59.99</p>
+                    <p class="product-description">Classic denim jacket, perfect for any season.</p>
                     <button class="buy-button">Add to Cart</button>
                 </div>
             </div>
@@ -90,5 +139,6 @@
     <footer>
         <p>&copy; 2024 Our Shop. All rights reserved.</p>
     </footer>
+    <script src="scripts.js"></script>
 </body>
 </html>
